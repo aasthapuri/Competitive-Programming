@@ -7,7 +7,12 @@ public class Main {
         HashMap<Integer,Integer> map = new HashMap<>();
         for (Integer i: list) {
             Integer i1=map.get(i);
-            map.put(i,(i1==null)? 1: i1+1);
+            if(i1==null){
+            map.put(i,1);
+            }
+            else{
+            map.put(i,i1+1);
+            }
         }
         for (Map.Entry<Integer, Integer> map1 : map.entrySet()) {
             if (map1.getValue()==2){
