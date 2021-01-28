@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static boolean Related(String first, String second) {
+    public static boolean Realted(String first, String second) {
         first=first.toUpperCase();
         second=second.toUpperCase();
         char[] one=first.toCharArray();
@@ -35,6 +35,6 @@ public class Main {
         String first=scanner.next();
         System.out.println("Enter second string: ");
         String second=scanner.next();
-        System.out.printf("Do these make other words by rearranging them? \n" + Related(first,second));
+        System.out.printf("Do these make other words by rearranging them? \n" + Realted(first,second));
     }
 }
