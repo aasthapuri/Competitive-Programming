@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static boolean Realted(String first, String second) {
+    public static boolean Related(String first, String second) {
         first=first.toUpperCase();
         second=second.toUpperCase();
         char[] one=first.toCharArray();
@@ -15,10 +15,10 @@ public class Main {
         if(first.length()==second.length()){
             Arrays.sort(one);
             Arrays.sort(two);
-            if(Arrays.equals(one,two)){
+            if(Arrays.equals(one,two))
                 return true;
 
-            }
+            
             else{
                 return false;
             }
@@ -26,10 +26,6 @@ public class Main {
         else{
             return  false;
         }
-
-
-
-    }
     public static void main (String[]args){
         // write your code here
         Scanner scanner = new Scanner(System.in);
@@ -39,6 +35,6 @@ public class Main {
         String first=scanner.next();
         System.out.println("Enter second string: ");
         String second=scanner.next();
-        System.out.printf("Do these make other words by rearranging them? \n" + Realted(first,second));
+        System.out.printf("Do these make other words by rearranging them? \n" + Related(first,second));
     }
 }
