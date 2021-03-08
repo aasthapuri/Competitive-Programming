@@ -9,15 +9,15 @@ public class Related2 {
 
         if(first.length()!=second.length())
             return false;
-        for(int i=0;i<first.length();i++){
-            for(int j=0;j<second.length();j++){
-                if(first.charAt(i)==second.charAt(j)){
+            int i=0;
+            int j=0;
+        while(i<first.length() && j<second.length()){
+            if(first.charAt(i)==second.charAt(j)){
                     second = second.substring(0, j) + second.substring(j + 1);
+                    i++;
+                    j++;
                     break;
-                }
             }
-        }
-
         return (second.length()==0);
     }
     public static void main (String[]args) {
